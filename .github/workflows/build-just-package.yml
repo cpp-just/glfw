@@ -23,12 +23,11 @@ jobs:
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
       
-    - name: Pull latest changes from GLM repository
+    - name: Pull latest changes from GLFW repository
       run: |
-        git remote add glm https://github.com/g-truc/glm.git
-        git pull glm master --rebase
-        rm -f .github/workflows/ci.yml
-        rm -f .github/workflows/make_light_release.yml
+        git remote add glfw https://github.com/glfw/glfw.git
+        git pull glfw master --rebase
+        rm -f .github/workflows/build.yml
 
     - name: Install dependencies
       run: sudo apt install xorg-dev
