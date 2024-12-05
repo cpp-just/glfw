@@ -42,9 +42,6 @@ jobs:
       run: |
         mkdir lib
         mv build/src/libglfw3.a lib/libglfw3.a
-        mkdir include
-        mkdir include/GLFW
-        cp -r GLFW/* include/GLFW/
         zip -r just.zip lib include
 
     - name: Set Release Date
